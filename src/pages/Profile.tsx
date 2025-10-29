@@ -31,7 +31,7 @@ const Profile = () => {
   };
 
   return (
-    <div className="w-[200px]">
+    <div className="w-[200px] flex flex-col gap-4">
       <Toaster position="top-center" richColors dir="rtl" />
       <Input
         label={t("name")}
