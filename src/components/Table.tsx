@@ -19,6 +19,7 @@ const Table: React.FC<{ data: IFormInput[]; editHandler: (i: string) => void; de
               <th>{t("title")}</th>
               <th>{t("priority")}</th>
               <th>{t("status")}</th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
