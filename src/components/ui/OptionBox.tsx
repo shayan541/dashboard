@@ -35,7 +35,7 @@ const OptionBox: React.FC<{
                 <li
                   key={item.key + i}
                   onClick={() => onChange?.(item.key)}
-                  className="p-2 hover:bg-gold-100 cursor-pointer dark:hover:bg-slate-200"
+                  className="p-2 hover:bg-gold-100 cursor-pointer dark:hover:bg-slate-200 capitalize"
                 >
                   {item.value}
                 </li>

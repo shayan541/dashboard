@@ -64,6 +64,7 @@ const TodoForm: React.FC<{
           label={t("title")}
           register={register("title", { required: t("needed_field"), maxLength: { value: 20, message: t("input_large") } })}
           error={errors.title?.message}
+          placeHolder={t("title")}
         />
 
         <Controller
@@ -82,6 +83,7 @@ const TodoForm: React.FC<{
               setValue={setValue}
               label={t("priority")}
               onChange={(i) => setPriority(i)}
+              placeHolder={t("priority")}
             />
           )}
         />

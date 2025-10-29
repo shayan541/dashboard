@@ -6,8 +6,8 @@
   "morning_msg": "Good morning",
   "evening_msg": "Good evening",
   "night_msg": "Good night",
-  "add_todo": "add new task",
-  "needed_field": "this field is needed.",
+  "add_todo": "Add new task",
+  "needed_field": "This field is needed.",
   "title": "Title",
   "high": "high",
   "medium": "medium",
@@ -43,5 +43,6 @@
   "not_found": "Page not found.",
   "back_to_main": "Back to main page",
   "not_notif": "There is not any notif.",
-  "loading_cities": "Loading cities list."
+  "loading_cities": "Loading cities list.",
+  "status": "Status"
 }

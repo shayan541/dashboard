@@ -13,7 +13,8 @@ const DropDown: React.FC<{
   options: option[];
   onChange?: (i: string) => void;
   label: string;
-}> = ({ options, onChange, label, name, setValue, value }) => {
+  placeHolder?: string;
+}> = ({ options, onChange, label, name, setValue, value, placeHolder }) => {
   const onChangeHandler = (input: string) => {
     if (onChange) onChange(input);
     if (name && setValue) setValue(name, input, { shouldValidate: true, shouldDirty: true });
@@ -24,7 +25,12 @@ const DropDown: React.FC<{
       <div className="flex flex-col">
         <label onClick={(e) => e.stopPropagation()}>{label}:</label>
         <div className="border shadow border-gold-100 dark:border-black outline-none rounded min-h-[25.35px] mt-1 px-1 flex justify-between">
-          <div>{options.find((item) => item.key === value)?.value}</div>
+          {options.find((item) => item.key === value)?.value ? (
+            <p className="capitalize">{options.find((item) => item.key === value)?.value}</p>
+          ) : (
+            <p className="text-[#b5babe]">{placeHolder}</p>
+          )}
+
           <span className={`ml-2 dark:text-darkText`}>▾</span>
         </div>
       </div>

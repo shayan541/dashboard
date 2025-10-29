@@ -16,7 +16,7 @@ const Table: React.FC<{ data: IFormInput[]; editHandler: (i: string) => void; de
         <table className="border border-gold-200 w-full">
           <thead>
             <tr className="border-b border-b-gold-200 capitalize">
-              <th>{t("title")}</th>
+              <th className="px-4">{t("title")}</th>
               <th>{t("priority")}</th>
               <th>{t("status")}</th>
               <th></th>
@@ -25,10 +25,10 @@ const Table: React.FC<{ data: IFormInput[]; editHandler: (i: string) => void; de
           <tbody>
             {data.map((item) => (
               <tr key={item.id} className="border-b border-b-gold-200  last:border-0 hover:bg-slate-100">
-                <td>{item.title}</td>
-                <td>{t(item.priority)}</td>
+                <td className="px-4">{item.title}</td>
+                <td className="capitalize">{t(item.priority)}</td>
                 <td>{item.isDone ? "✅" : <span className="text-red-500">✖️</span>}</td>
-                <td className="flex justify-end gap-2">
+                <td className="flex justify-end gap-2 px-4">
                   <span onClick={() => editHandler(item.id)} className="cursor-pointer">
                     ✏️
                   </span>
