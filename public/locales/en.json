@@ -26,7 +26,7 @@
   "save": "Save",
   "name": "name",
   "city": "City",
-  "loading": "loading the time from server if it doesn't response it will show your system clock. It may take 8 seconds.",
+  "loading": "loading the time from server if it doesn't response it will show your system clock. It may takes 8 seconds.",
   "err_message": "there is an error while getting data",
   "error_weather": "there is an error while getting weather data ",
   "loading_weather": "loading weather data",
