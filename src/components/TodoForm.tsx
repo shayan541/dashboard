@@ -67,27 +67,29 @@ const TodoForm: React.FC<{
           placeHolder={t("title")}
         />
 
-        <Controller
-          name="priority"
-          control={control}
-          rules={{ required: t("needed_field") }}
-          render={() => (
-            <DropDown
-              value={priority ? priority : data?.priority}
-              name="priority"
-              options={[
-                { key: "high", value: t("high") },
-                { key: "medium", value: t("medium") },
-                { key: "low", value: t("low") },
-              ]}
-              setValue={setValue}
-              label={t("priority")}
-              onChange={(i) => setPriority(i)}
-              placeHolder={t("priority")}
-            />
-          )}
-        />
-        {errors.priority && <span className="text-red-500 text-sm">{errors.priority.message}</span>}
+        <div>
+          <Controller
+            name="priority"
+            control={control}
+            rules={{ required: t("needed_field") }}
+            render={() => (
+              <DropDown
+                value={priority ? priority : data?.priority}
+                name="priority"
+                options={[
+                  { key: "high", value: t("high") },
+                  { key: "medium", value: t("medium") },
+                  { key: "low", value: t("low") },
+                ]}
+                setValue={setValue}
+                label={t("priority")}
+                onChange={(i) => setPriority(i)}
+                placeHolder={t("priority")}
+              />
+            )}
+          />
+          {errors.priority && <span className="text-red-500 text-sm">{errors.priority.message}</span>}
+        </div>
 
         <CheckBox
           label={t("is_done")}
