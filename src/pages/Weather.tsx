@@ -66,7 +66,9 @@ const Weather = () => {
 
   return (
     <div className="w-full flex flex-col items-center">
-      <DropDown label={t("city")} options={cities} value={selectedCity} onChange={(val) => setSelectedCity(val)} />
+      <div className="min-w-[150px] max-w-[200px]">
+        <DropDown label={t("city")} options={cities} value={selectedCity} onChange={(val) => setSelectedCity(val)} />
+      </div>
       {loadingWeather && <div>{t("loading_weather")}...</div>}
       {!!errorWeather && <div>{t("error_weather")}...</div>}
       {!loadingWeather && !errorWeather && weather && (
