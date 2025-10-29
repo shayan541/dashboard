@@ -45,6 +45,9 @@ const TodoForm: React.FC<{
       showModal={showModal}
       closeModalHandler={() => {
         closeModalHandler(false);
+        reset();
+        setPriority("");
+        setIsDone(false);
       }}
     >
       <form
