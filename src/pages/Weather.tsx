@@ -61,7 +61,7 @@ const Weather = () => {
     };
   }, [coords]);
 
-  if (loading) return <div>{t("loading_weather")}....</div>;
+  if (loading) return <div>{t("loading_cities")}....</div>;
   if (error) return <div>{t("err_message")}</div>;
 
   return (

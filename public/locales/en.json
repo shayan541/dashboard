@@ -42,5 +42,6 @@
   "input_large": "The number of characters must be less than 20.",
   "not_found": "Page not found.",
   "back_to_main": "Back to main page",
-  "not_notif": "There is not any notif."
+  "not_notif": "There is not any notif.",
+  "loading_cities": "Loading cities list."
 }
