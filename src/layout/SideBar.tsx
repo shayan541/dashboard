@@ -17,8 +17,11 @@ const SideBar = () => {
       <nav>
         <ul className="flex sm:block">
           {menueItems.map((item) => (
-            <li key={item.id} className={`md:text-center  capitalize ${item.url === pathname ? "font-extrabold " : ""}`}>
-              <Link className="w-full h-full inline-block p-4" to={item.url}>
+            <li
+              key={item.id}
+              className={`md:text-center  capitalize ${item.url === pathname ? "font-extrabold border-b border-b-gold-100 dark:border-b-darkBg sm:border-b-0 " : ""}`}
+            >
+              <Link className=" h-full inline-block p-4" to={item.url}>
                 {t(item.title)}
               </Link>
             </li>
