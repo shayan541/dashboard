@@ -61,13 +61,12 @@ const Weather = () => {
     };
   }, [coords]);
 
-  if (loading) return <div>{t("loading_weather")}....</div>;
   if (error) return <div>{t("err_message")}</div>;
 
   return (
     <div className="w-full flex flex-col items-center">
       <DropDown label={t("city")} options={cities} value={selectedCity} onChange={(val) => setSelectedCity(val)} />
-      {loadingWeather && <div>{t("loading_weather")}...</div>}
+      {loadingWeather || (loading && <div>{t("loading_weather")}...</div>)}
       {!!errorWeather && <div>{t("error_weather")}...</div>}
       {!loadingWeather && !errorWeather && weather && (
         <div className="mt-4">

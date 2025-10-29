@@ -48,7 +48,7 @@ const TodoForm: React.FC<{
       }}
     >
       <form
-        className="flex flex-col p-4 gap-3"
+        className="flex flex-col p-4 gap-5"
         onSubmit={handleSubmit((data) => {
           onSubmit(data);
           setPriority("");
