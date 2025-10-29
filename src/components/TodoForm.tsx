@@ -95,6 +95,7 @@ const TodoForm: React.FC<{
         <input
           className="border p-2 rounded shadow bg-gold-200 text-white hover:text-gold-100 hover:bg-white cursor-pointer dark:bg-darkbtn"
           type="submit"
+          value={t("save")}
         />
       </form>
     </Modal>

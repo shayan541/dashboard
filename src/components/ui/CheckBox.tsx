@@ -12,7 +12,7 @@ const CheckBox: React.FC<{ label: string; name: string; onChange?: (val: boolean
 }) => {
   const [isChecked, setIsChecked] = useState(value);
   return (
-    <div>
+    <div className="flex items-center gap-2">
       <label>{label}:</label>
       <div
         onClick={() => {
