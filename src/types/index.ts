@@ -18,6 +18,7 @@ export type Setting = {
   name: string;
   city: string;
   theme: ThemeType;
+  notifIsChecked: boolean;
 };
 
 export interface IWeather {

@@ -7,7 +7,7 @@ export function useSetting() {
       return JSON.parse(localStorage.getItem("setting") || "");
     } catch (error) {
       console.log(error);
-      return { city: "Tehran", name: "", theme: "light" };
+      return { city: "Tehran", name: "", theme: "light", setNotifIsChecked: false };
     }
   });
 

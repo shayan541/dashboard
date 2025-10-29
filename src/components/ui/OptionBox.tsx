@@ -28,7 +28,7 @@ const OptionBox: React.FC<{
             showMenu ? "block" : "hidden"
           }`}
         >
-          {text && <div className="shadow rounded p-2 w-[300px]">{text}</div>}
+          {text && <div className="shadow rounded p-2 w-[300px] text-center">{text}</div>}
           {options && (
             <ul>
               {options.map((item, i) => (
