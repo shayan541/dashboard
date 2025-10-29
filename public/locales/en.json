@@ -39,5 +39,7 @@
   "edit_success": "Data changed successfully.",
   "add_success": "Data added successfully.",
   "delete_success": "Data deleted successfully.",
-  "input_large": "The number of characters must be less than 20."
+  "input_large": "The number of characters must be less than 20.",
+  "not_found": "Page not found.",
+  "back_to_main": "Back to main page"
 }
