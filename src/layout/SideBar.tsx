@@ -8,7 +8,7 @@ const SideBar = () => {
 
   return (
     <aside
-      className={`md:w-[200px]  border-b ${
+      className={`md:w-[200px]  border-b pb-2 sm:pb-0 ${
         i18n.language === "en"
           ? " sm:border-r-2 sm:border-r-black sm:dark:border-r-white"
           : "sm:border-l-2 sm:border-l-black sm:dark:border-l-white"
@@ -17,12 +17,11 @@ const SideBar = () => {
       <nav>
         <ul className="flex sm:block">
           {menueItems.map((item) => (
-            <li
-              key={item.id}
-              className={`md:text-center  capitalize ${item.url === pathname ? "font-extrabold border-b border-b-gold-100 dark:border-b-darkBg sm:border-b-0 " : ""}`}
-            >
+            <li key={item.id} className={`md:text-center  capitalize ${item.url === pathname ? "font-extrabold" : ""}`}>
               <Link className=" h-full inline-block p-4" to={item.url}>
-                {t(item.title)}
+                <span className={`${item.url === pathname ? " border-b-2 border-b-gold-100 dark:border-b-darkText  " : ""}`}>
+                  {t(item.title)}
+                </span>
               </Link>
             </li>
           ))}
